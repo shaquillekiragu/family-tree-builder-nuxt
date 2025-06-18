@@ -13,11 +13,48 @@ enum Sex {
   female
 }
 
-enum directRelationshipType {
+enum DirectRelationshipType {
   father
   mother
   wife
   husband
   son
   daughter
+}
+
+model User {
+  userId Int @id @default(autoincrement())
+  email String @unique
+  password String
+  trees Tree[]
+}
+
+model Tree {
+  treeId Int @id @default(autoincrement())
+  treeName String
+  treePassword String
+  creatorId User @relation(fields: [creatorId], references: [userId])
+  createdAt DateTime @default(now())
+  primaryPersonId Int
+}
+
+model Person {
+  personId Int @id @default(autoincrement())
+  firstName String
+  middleNames String?
+  lastName String
+  dateOfBirth DateTime
+  placeOfBirth String?
+  countryOfBirth String?
+  sex Sex
+  biography String?
+  notes String?
+}
+
+model RelationshipType {
+  relationshipId Int @id @default(autoincrement())
+  relationshipType DirectRelationshipType
+  treeId Tree @relation(fields: [treeId], references: [treeId])
+  fromPersonId Person @relation(fields: [fromPersonId], references: [personId])
+  toPersonId Person @relation(fields: [toPersonId], references: [personId])
 }

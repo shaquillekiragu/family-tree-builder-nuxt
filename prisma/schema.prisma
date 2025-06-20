@@ -33,9 +33,11 @@ model Tree {
   treeId Int @id @default(autoincrement())
   treeName String
   treePassword String
-  creatorId User @relation(fields: [creatorId], references: [userId])
+  creatorId Int
+  creator User @relation(fields: [creatorId], references: [userId])
   createdAt DateTime @default(now())
   primaryPersonId Int
+  relationships RelationshipType[]
 }
 
 model Person {
@@ -49,12 +51,17 @@ model Person {
   sex Sex
   biography String?
   notes String?
+  fromRelationships RelationshipType[] @relation("FromPerson")
+  toRelationships RelationshipType[] @relation("ToPerson")
 }
 
 model RelationshipType {
   relationshipId Int @id @default(autoincrement())
   relationshipType DirectRelationshipType
-  treeId Tree @relation(fields: [treeId], references: [treeId])
-  fromPersonId Person @relation(fields: [fromPersonId], references: [personId])
-  toPersonId Person @relation(fields: [toPersonId], references: [personId])
+  treeId Int
+  tree Tree @relation(fields: [treeId], references: [treeId])
+  fromPersonId Int
+  fromPerson Person @relation("FromPerson", fields: [fromPersonId], references: [personId])
+  toPersonId Int
+  toPerson Person @relation("ToPerson", fields: [toPersonId], references: [personId])
 }

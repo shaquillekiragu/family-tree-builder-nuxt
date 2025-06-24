@@ -1,4 +1,4 @@
-# family-tree-builder
+# family-tree-builder-nuxt
 
 ## Tech Stack:
 

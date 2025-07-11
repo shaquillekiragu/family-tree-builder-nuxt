@@ -15,8 +15,8 @@ interface IPerson {
   biography: string;
   notes: string;
   generationIndex: number;
-  motherId: number | null;
   fatherId: number | null;
+  motherId: number | null;
   spouseId: number | null;
   brotherIds: number[];
   sisterIds: number[];
@@ -38,8 +38,8 @@ class Person implements IPerson {
   biography: string;
   notes: string;
   generationIndex: number;
-  motherId: number | null;
   fatherId: number | null;
+  motherId: number | null;
   spouseId: number | null;
   brotherIds: number[];
   sisterIds: number[];
@@ -60,8 +60,8 @@ class Person implements IPerson {
     biography: string,
     notes: string,
     generationIndex: number,
-    motherId: number | null,
     fatherId: number | null,
+    motherId: number | null,
     spouseId: number | null,
     brotherIds: number[],
     sisterIds: number[],
@@ -81,8 +81,8 @@ class Person implements IPerson {
     this.biography = biography;
     this.notes = notes;
     this.generationIndex = generationIndex;
-    this.motherId = motherId;
     this.fatherId = fatherId;
+    this.motherId = motherId;
     this.spouseId = spouseId;
     this.brotherIds = brotherIds;
     this.sisterIds = sisterIds;

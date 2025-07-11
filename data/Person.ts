@@ -14,7 +14,14 @@ interface IPerson {
   isPrimaryPerson: boolean;
   biography: string;
   notes: string;
-  generation: number;
+  generationIndex: number;
+  motherId: number | null;
+  fatherId: number | null;
+  spouseId: number | null;
+  brotherIds: number[];
+  sisterIds: number[];
+  sonIds: number[];
+  daughterIds: number[];
 }
 
 class Person implements IPerson {
@@ -30,7 +37,14 @@ class Person implements IPerson {
   isPrimaryPerson: boolean;
   biography: string;
   notes: string;
-  generation: number;
+  generationIndex: number;
+  motherId: number | null;
+  fatherId: number | null;
+  spouseId: number | null;
+  brotherIds: number[];
+  sisterIds: number[];
+  sonIds: number[];
+  daughterIds: number[];
 
   constructor(
     personId: number,
@@ -45,7 +59,14 @@ class Person implements IPerson {
     isPrimaryPerson: boolean,
     biography: string,
     notes: string,
-    generation: number
+    generationIndex: number,
+    motherId: number | null,
+    fatherId: number | null,
+    spouseId: number | null,
+    brotherIds: number[],
+    sisterIds: number[],
+    sonIds: number[],
+    daughterIds: number[]
   ) {
     this.personId = personId;
     this.treeId = treeId;
@@ -59,7 +80,14 @@ class Person implements IPerson {
     this.isPrimaryPerson = isPrimaryPerson;
     this.biography = biography;
     this.notes = notes;
-    this.generation = generation;
+    this.generationIndex = generationIndex;
+    this.motherId = motherId;
+    this.fatherId = fatherId;
+    this.spouseId = spouseId;
+    this.brotherIds = brotherIds;
+    this.sisterIds = sisterIds;
+    this.sonIds = sonIds;
+    this.daughterIds = daughterIds;
   }
 
   getFullName(): string {

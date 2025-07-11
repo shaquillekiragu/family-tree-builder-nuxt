@@ -1,5 +1,5 @@
-const sexEnum = ["male", "female"] as const;
-type Sex = (typeof sexEnum)[number];
+const biologicalSexEnum = ["male", "female"] as const;
+type BiologicalSex = (typeof biologicalSexEnum)[number];
 
 interface IPerson {
   personId: number;
@@ -7,7 +7,7 @@ interface IPerson {
   firstName: string;
   middleNames: string;
   lastName: string;
-  sex: Sex;
+  biologicalSex: BiologicalSex;
   dateOfBirth: string;
   placeOfBirth: string;
   countryOfBirth: string;
@@ -30,7 +30,7 @@ class Person implements IPerson {
   firstName: string;
   middleNames: string;
   lastName: string;
-  sex: Sex;
+  biologicalSex: BiologicalSex;
   dateOfBirth: string;
   placeOfBirth: string;
   countryOfBirth: string;
@@ -52,7 +52,7 @@ class Person implements IPerson {
     firstName: string,
     middleNames: string,
     lastName: string,
-    sex: Sex,
+    biologicalSex: BiologicalSex,
     dateOfBirth: string,
     placeOfBirth: string,
     countryOfBirth: string,
@@ -73,7 +73,7 @@ class Person implements IPerson {
     this.firstName = firstName;
     this.middleNames = middleNames;
     this.lastName = lastName;
-    this.sex = sex;
+    this.biologicalSex = biologicalSex;
     this.dateOfBirth = dateOfBirth;
     this.placeOfBirth = placeOfBirth;
     this.countryOfBirth = countryOfBirth;
@@ -118,5 +118,5 @@ class Person implements IPerson {
   }
 }
 
-export { Person, sexEnum };
-export type { IPerson, Sex };
+export { Person, biologicalSexEnum };
+export type { IPerson, BiologicalSex };

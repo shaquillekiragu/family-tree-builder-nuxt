@@ -1,5 +1,5 @@
 import { Person } from "~/data/Person";
-import type { IPerson, Sex } from "~/data/Person";
+import type { IPerson, BiologicalSex } from "~/data/Person";
 
 class CreatePerson extends Person {
   createPersonId(newPersonId: number): void {
@@ -22,8 +22,8 @@ class CreatePerson extends Person {
     this.lastName = newLastName;
   }
 
-  createSex(newSex: Sex): void {
-    this.sex = newSex;
+  createBiologicalSex(newBiologicalSex: BiologicalSex): void {
+    this.biologicalSex = newBiologicalSex;
   }
 
   createDateOfBirth(newDateOfBirth: string): void {

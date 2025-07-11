@@ -8,7 +8,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Sex {
+enum BiologicalSex {
   male
   female
 }
@@ -48,7 +48,7 @@ model Person {
   dateOfBirth DateTime
   placeOfBirth String?
   countryOfBirth String?
-  sex Sex
+  biologicalSex BiologicalSex
   biography String?
   notes String?
   fromRelationships RelationshipType[] @relation("FromPerson")

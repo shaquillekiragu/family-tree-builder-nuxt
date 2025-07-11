@@ -14,7 +14,14 @@ const personOne = new CreatePerson(
   true,
   "",
   "",
-  0
+  0,
+  null,
+  null,
+  2,
+  [],
+  [],
+  [5],
+  [4]
 );
 
 const personTwo = new CreatePerson(
@@ -30,7 +37,14 @@ const personTwo = new CreatePerson(
   false,
   "",
   "",
-  0
+  0,
+  null,
+  null,
+  1,
+  [],
+  [],
+  [5],
+  [4]
 );
 
 const personThree = new CreatePerson(
@@ -46,7 +60,14 @@ const personThree = new CreatePerson(
   false,
   "",
   "",
-  0
+  1,
+  null,
+  null,
+  4,
+  [],
+  [],
+  [7],
+  [8]
 );
 
 const personFour = new CreatePerson(
@@ -62,7 +83,14 @@ const personFour = new CreatePerson(
   false,
   "",
   "",
-  0
+  1,
+  2,
+  1,
+  3,
+  [5],
+  [],
+  [7],
+  [8]
 );
 
 const personFive = new CreatePerson(
@@ -78,7 +106,14 @@ const personFive = new CreatePerson(
   false,
   "",
   "",
-  0
+  1,
+  2,
+  1,
+  6,
+  [],
+  [4],
+  [9],
+  [10]
 );
 
 const personSix = new CreatePerson(
@@ -94,7 +129,14 @@ const personSix = new CreatePerson(
   false,
   "",
   "",
-  0
+  1,
+  null,
+  null,
+  5,
+  [],
+  [],
+  [9],
+  [10]
 );
 
 const personSeven = new CreatePerson(
@@ -110,7 +152,14 @@ const personSeven = new CreatePerson(
   false,
   "",
   "",
-  0
+  2,
+  3,
+  4,
+  null,
+  [],
+  [8],
+  [],
+  []
 );
 
 const personEight = new CreatePerson(
@@ -126,7 +175,14 @@ const personEight = new CreatePerson(
   false,
   "",
   "",
-  0
+  2,
+  3,
+  4,
+  null,
+  [7],
+  [],
+  [],
+  []
 );
 
 const personNine = new CreatePerson(
@@ -142,7 +198,14 @@ const personNine = new CreatePerson(
   false,
   "",
   "",
-  0
+  2,
+  6,
+  5,
+  null,
+  [],
+  [10],
+  [],
+  []
 );
 
 const personTen = new CreatePerson(
@@ -158,7 +221,14 @@ const personTen = new CreatePerson(
   false,
   "",
   "",
-  0
+  2,
+  6,
+  5,
+  null,
+  [9],
+  [],
+  [],
+  []
 );
 
 export {

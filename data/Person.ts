@@ -14,6 +14,7 @@ interface IPerson {
   isPrimaryPerson: boolean;
   biography: string;
   notes: string;
+  generation: number;
 }
 
 class Person implements IPerson {
@@ -29,6 +30,7 @@ class Person implements IPerson {
   isPrimaryPerson: boolean;
   biography: string;
   notes: string;
+  generation: number;
 
   constructor(
     personId: number,
@@ -42,7 +44,8 @@ class Person implements IPerson {
     countryOfBirth: string,
     isPrimaryPerson: boolean,
     biography: string,
-    notes: string
+    notes: string,
+    generation: number
   ) {
     this.personId = personId;
     this.treeId = treeId;
@@ -56,6 +59,7 @@ class Person implements IPerson {
     this.isPrimaryPerson = isPrimaryPerson;
     this.biography = biography;
     this.notes = notes;
+    this.generation = generation;
   }
 
   getFullName(): string {
@@ -83,6 +87,56 @@ class Person implements IPerson {
 
   getBirthplace(): string {
     return `${this.placeOfBirth}, ${this.countryOfBirth}`;
+  }
+}
+
+class CreatePerson extends Person {
+  createPersonId(newPersonId: number): void {
+    this.personId = newPersonId;
+  }
+
+  createTreeId(newTreeId: number): void {
+    this.treeId = newTreeId;
+  }
+
+  createFirstName(newFirstName: string): void {
+    this.firstName = newFirstName;
+  }
+
+  createMiddleNames(newMiddleNames: string): void {
+    this.middleNames = newMiddleNames;
+  }
+
+  createLastName(newLastName: string): void {
+    this.lastName = newLastName;
+  }
+
+  createSex(newSex: Sex): void {
+    this.sex = newSex;
+  }
+
+  createDateOfBirth(newDateOfBirth: string): void {
+    this.dateOfBirth = newDateOfBirth;
+  }
+
+  createCountryOfBirth(newCountryOfBirth: string): void {
+    this.countryOfBirth = newCountryOfBirth;
+  }
+
+  createIsPrimaryPerson(newIsPrimaryPerson: boolean): void {
+    this.isPrimaryPerson = newIsPrimaryPerson;
+  }
+
+  createBiography(newBiography: string): void {
+    this.biography = newBiography;
+  }
+
+  createNotes(newNotes: string): void {
+    this.notes = newNotes;
+  }
+
+  createMultipleProperties(creates: Partial<IPerson>): void {
+    Object.assign(this, creates);
   }
 }
 
@@ -130,13 +184,9 @@ class UpdatePerson extends Person {
   updateNotes(newNotes: string): void {
     this.notes = newNotes;
   }
-
-  updateMultipleProperties(updates: Partial<IPerson>): void {
-    Object.assign(this, updates);
-  }
 }
 
-const personOne = new UpdatePerson(
+const personOne = new CreatePerson(
   1,
   1,
   "Richard",
@@ -148,10 +198,11 @@ const personOne = new UpdatePerson(
   "United States of America",
   true,
   "",
-  ""
+  "",
+  0
 );
 
-const personTwo = new UpdatePerson(
+const personTwo = new CreatePerson(
   2,
   1,
   "Margaret",
@@ -163,10 +214,11 @@ const personTwo = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personThree = new UpdatePerson(
+const personThree = new CreatePerson(
   3,
   1,
   "Robert",
@@ -178,10 +230,11 @@ const personThree = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personFour = new UpdatePerson(
+const personFour = new CreatePerson(
   4,
   1,
   "Sarah",
@@ -193,10 +246,11 @@ const personFour = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personFive = new UpdatePerson(
+const personFive = new CreatePerson(
   5,
   1,
   "Michael",
@@ -208,10 +262,11 @@ const personFive = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personSix = new UpdatePerson(
+const personSix = new CreatePerson(
   6,
   1,
   "Jennifer",
@@ -223,10 +278,11 @@ const personSix = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personSeven = new UpdatePerson(
+const personSeven = new CreatePerson(
   7,
   1,
   "David",
@@ -238,10 +294,11 @@ const personSeven = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personEight = new UpdatePerson(
+const personEight = new CreatePerson(
   8,
   1,
   "Emily",
@@ -253,10 +310,11 @@ const personEight = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personNine = new UpdatePerson(
+const personNine = new CreatePerson(
   9,
   1,
   "Alexander",
@@ -268,10 +326,11 @@ const personNine = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
-const personTen = new UpdatePerson(
+const personTen = new CreatePerson(
   10,
   1,
   "Sophia",
@@ -283,11 +342,13 @@ const personTen = new UpdatePerson(
   "United States of America",
   false,
   "",
-  ""
+  "",
+  0
 );
 
 export {
   Person,
+  CreatePerson,
   UpdatePerson,
   sexEnum,
   personOne,

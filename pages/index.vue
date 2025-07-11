@@ -67,25 +67,25 @@ import {
   personEight,
   personNine,
   personTen,
-} from "~/data/data";
+} from "~/data/Person";
 
-const user = {
-  userId: 1,
-  firstName: "John",
-  middleNames: "",
-  lastName: "Doe",
-  email: "JohnD@gmail.com",
-  password: "john_doe_",
-};
+// const user = {
+//   userId: 1,
+//   firstName: "John",
+//   middleNames: "",
+//   lastName: "Doe",
+//   email: "JohnD@gmail.com",
+//   password: "john_doe_",
+// };
 
-const tree = {
-  treeId: 1,
-  userId: 1,
-  treeName: "Doe Family Tree",
-  treePassword: "DoeFam25",
-  createdBy: 1,
-  createdAt: 1752164053,
-};
+// const tree = {
+//   treeId: 1,
+//   userId: 1,
+//   treeName: "Doe Family Tree",
+//   treePassword: "DoeFam25",
+//   createdBy: 1,
+//   createdAt: 1752164053,
+// };
 
 // LOGIC:
 

@@ -67,7 +67,7 @@ import {
   personEight,
   personNine,
   personTen,
-} from "~/data/Person";
+} from "~/data/personInstances";
 
 // const user = {
 //   userId: 1,

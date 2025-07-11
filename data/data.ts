@@ -256,6 +256,36 @@ const personEight = new UpdatePerson(
   ""
 );
 
+const personNine = new UpdatePerson(
+  9,
+  1,
+  "Alexander",
+  "William",
+  "Doe",
+  sexEnum[0],
+  "2005",
+  "Austin",
+  "United States of America",
+  false,
+  "",
+  ""
+);
+
+const personTen = new UpdatePerson(
+  10,
+  1,
+  "Sophia",
+  "Rose",
+  "Doe",
+  sexEnum[1],
+  "2008",
+  "Nashville",
+  "United States of America",
+  false,
+  "",
+  ""
+);
+
 export {
   Person,
   UpdatePerson,
@@ -268,6 +298,8 @@ export {
   personSix,
   personSeven,
   personEight,
+  personNine,
+  personTen,
 };
 
 export type { IPerson, Sex };

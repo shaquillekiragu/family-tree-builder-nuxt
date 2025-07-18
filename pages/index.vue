@@ -1,9 +1,6 @@
 <template>
   <section class="w-screen h-screen flex flex-col items-center">
-    <header class="flex flex-col items-center my-10">
-      <h1>Index Page</h1>
-      <UButton></UButton>
-    </header>
+    <h1 class="my-10 text-center text-2xl font-bold">Index Page</h1>
     <main class="w-full border-3 !mx-10 py-10 flex flex-col gap-10">
       <section class="w-full p-10 flex justify-center items-center gap-10">
         <article class="w-50 h-75 border flex flex-col gap-2 p-2">

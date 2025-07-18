@@ -1,5 +1,10 @@
 import { CreatePerson } from "~/data/CreatePerson";
 import { biologicalSexEnum } from "~/data/Person";
+import type { IPerson } from "~/data/Person";
+
+const firstGenerationPersons: IPerson[] = [];
+const secondGenerationPersons: IPerson[] = [];
+const thirdGenerationPersons: IPerson[] = [];
 
 const personOne = new CreatePerson(
   1,
@@ -12,17 +17,13 @@ const personOne = new CreatePerson(
   "New York",
   "United States of America",
   true,
-  "",
-  "",
   0,
-  null,
-  null,
-  2,
-  [],
-  [],
-  [5],
-  [4]
+  0,
+  "",
+  ""
 );
+
+firstGenerationPersons.push(personOne);
 
 const personTwo = new CreatePerson(
   2,
@@ -35,17 +36,13 @@ const personTwo = new CreatePerson(
   "Boston",
   "United States of America",
   false,
-  "",
-  "",
   0,
-  null,
-  null,
-  1,
-  [],
-  [],
-  [5],
-  [4]
+  0,
+  "",
+  ""
 );
+
+firstGenerationPersons.push(personTwo);
 
 const personThree = new CreatePerson(
   3,
@@ -58,17 +55,13 @@ const personThree = new CreatePerson(
   "Chicago",
   "United States of America",
   false,
-  "",
-  "",
   1,
-  null,
-  null,
-  4,
-  [],
-  [],
-  [7],
-  [8]
+  0,
+  "",
+  ""
 );
+
+secondGenerationPersons.push(personThree);
 
 const personFour = new CreatePerson(
   4,
@@ -81,17 +74,13 @@ const personFour = new CreatePerson(
   "Detroit",
   "United States of America",
   false,
-  "",
-  "",
   1,
-  1,
-  2,
-  3,
-  [5],
-  [],
-  [7],
-  [8]
+  0,
+  "",
+  ""
 );
+
+secondGenerationPersons.push(personFour);
 
 const personFive = new CreatePerson(
   5,
@@ -104,17 +93,13 @@ const personFive = new CreatePerson(
   "Los Angeles",
   "United States of America",
   false,
-  "",
-  "",
   1,
   1,
-  2,
-  6,
-  [],
-  [4],
-  [9],
-  [10]
+  "",
+  ""
 );
+
+secondGenerationPersons.push(personFive);
 
 const personSix = new CreatePerson(
   6,
@@ -127,17 +112,13 @@ const personSix = new CreatePerson(
   "San Francisco",
   "United States of America",
   false,
-  "",
-  "",
   1,
-  null,
-  null,
-  5,
-  [],
-  [],
-  [9],
-  [10]
+  0,
+  "",
+  ""
 );
+
+secondGenerationPersons.push(personSix);
 
 const personSeven = new CreatePerson(
   7,
@@ -150,17 +131,13 @@ const personSeven = new CreatePerson(
   "Seattle",
   "United States of America",
   false,
-  "",
-  "",
   2,
-  4,
-  3,
-  null,
-  [],
-  [8],
-  [],
-  []
+  0,
+  "",
+  ""
 );
+
+thirdGenerationPersons.push(personSeven);
 
 const personEight = new CreatePerson(
   8,
@@ -173,17 +150,13 @@ const personEight = new CreatePerson(
   "Portland",
   "United States of America",
   false,
-  "",
-  "",
   2,
-  4,
-  3,
-  null,
-  [7],
-  [],
-  [],
-  []
+  1,
+  "",
+  ""
 );
+
+thirdGenerationPersons.push(personEight);
 
 const personNine = new CreatePerson(
   9,
@@ -196,17 +169,13 @@ const personNine = new CreatePerson(
   "Austin",
   "United States of America",
   false,
-  "",
-  "",
   2,
-  5,
-  6,
-  null,
-  [],
-  [10],
-  [],
-  []
+  0,
+  "",
+  ""
 );
+
+thirdGenerationPersons.push(personNine);
 
 const personTen = new CreatePerson(
   10,
@@ -219,27 +188,18 @@ const personTen = new CreatePerson(
   "Nashville",
   "United States of America",
   false,
-  "",
-  "",
   2,
-  5,
-  6,
-  null,
-  [9],
-  [],
-  [],
-  []
+  1,
+  "",
+  ""
 );
 
-export {
-  personOne,
-  personTwo,
-  personThree,
-  personFour,
-  personFive,
-  personSix,
-  personSeven,
-  personEight,
-  personNine,
-  personTen,
-};
+thirdGenerationPersons.push(personTen);
+
+const treeData = [
+  firstGenerationPersons,
+  secondGenerationPersons,
+  thirdGenerationPersons,
+];
+
+export { treeData };

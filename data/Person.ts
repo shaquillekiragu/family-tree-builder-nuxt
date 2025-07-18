@@ -16,6 +16,10 @@ interface IPerson {
   orderIndex: number;
   biography: string;
   notes: string;
+  getFullName(): string;
+  getYearOfBirth(): number | null;
+  getAge(): number | null;
+  getBirthplace(): string;
 }
 
 class Person implements IPerson {
@@ -65,7 +69,7 @@ class Person implements IPerson {
     this.biography = biography;
     this.notes = notes;
   }
-  ß;
+
   getFullName(): string {
     return `${this.firstName} ${this.middleNames} ${this.lastName}`.trim();
   }

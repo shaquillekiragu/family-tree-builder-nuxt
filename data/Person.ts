@@ -12,16 +12,10 @@ interface IPerson {
   placeOfBirth: string;
   countryOfBirth: string;
   isPrimaryPerson: boolean;
+  generationIndex: number;
+  orderIndex: number;
   biography: string;
   notes: string;
-  generationIndex: number;
-  fatherId: number | null;
-  motherId: number | null;
-  spouseId: number | null;
-  brotherIds: number[];
-  sisterIds: number[];
-  sonIds: number[];
-  daughterIds: number[];
 }
 
 class Person implements IPerson {
@@ -35,16 +29,10 @@ class Person implements IPerson {
   placeOfBirth: string;
   countryOfBirth: string;
   isPrimaryPerson: boolean;
+  generationIndex: number;
+  orderIndex: number;
   biography: string;
   notes: string;
-  generationIndex: number;
-  fatherId: number | null;
-  motherId: number | null;
-  spouseId: number | null;
-  brotherIds: number[];
-  sisterIds: number[];
-  sonIds: number[];
-  daughterIds: number[];
 
   constructor(
     personId: number,
@@ -57,16 +45,10 @@ class Person implements IPerson {
     placeOfBirth: string,
     countryOfBirth: string,
     isPrimaryPerson: boolean,
-    biography: string,
-    notes: string,
     generationIndex: number,
-    fatherId: number | null,
-    motherId: number | null,
-    spouseId: number | null,
-    brotherIds: number[],
-    sisterIds: number[],
-    sonIds: number[],
-    daughterIds: number[]
+    orderIndex: number,
+    biography: string,
+    notes: string
   ) {
     this.personId = personId;
     this.treeId = treeId;
@@ -78,18 +60,12 @@ class Person implements IPerson {
     this.placeOfBirth = placeOfBirth;
     this.countryOfBirth = countryOfBirth;
     this.isPrimaryPerson = isPrimaryPerson;
+    this.generationIndex = generationIndex;
+    this.orderIndex = orderIndex;
     this.biography = biography;
     this.notes = notes;
-    this.generationIndex = generationIndex;
-    this.fatherId = fatherId;
-    this.motherId = motherId;
-    this.spouseId = spouseId;
-    this.brotherIds = brotherIds;
-    this.sisterIds = sisterIds;
-    this.sonIds = sonIds;
-    this.daughterIds = daughterIds;
   }
-
+  ß;
   getFullName(): string {
     return `${this.firstName} ${this.middleNames} ${this.lastName}`.trim();
   }

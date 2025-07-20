@@ -2,9 +2,9 @@ import { CreatePerson } from "~/data/CreatePerson";
 import { biologicalSexEnum } from "~/data/Person";
 import type { IPerson } from "~/data/Person";
 
-const firstGenerationPersons: IPerson[] = [];
-const secondGenerationPersons: IPerson[] = [];
-const thirdGenerationPersons: IPerson[] = [];
+// const firstGenerationPersons: IPerson[] = [];
+// const secondGenerationPersons: IPerson[] = [];
+// const thirdGenerationPersons: IPerson[] = [];
 
 const personOne = new CreatePerson(
   1,
@@ -23,7 +23,7 @@ const personOne = new CreatePerson(
   ""
 );
 
-firstGenerationPersons.push(personOne);
+// firstGenerationPersons.push(personOne);
 
 const personTwo = new CreatePerson(
   2,
@@ -42,7 +42,7 @@ const personTwo = new CreatePerson(
   ""
 );
 
-firstGenerationPersons.push(personTwo);
+// firstGenerationPersons.push(personTwo);
 
 const personThree = new CreatePerson(
   3,
@@ -61,7 +61,7 @@ const personThree = new CreatePerson(
   ""
 );
 
-secondGenerationPersons.push(personThree);
+// secondGenerationPersons.push(personThree);
 
 const personFour = new CreatePerson(
   4,
@@ -80,7 +80,7 @@ const personFour = new CreatePerson(
   ""
 );
 
-secondGenerationPersons.push(personFour);
+// secondGenerationPersons.push(personFour);
 
 const personFive = new CreatePerson(
   5,
@@ -99,7 +99,7 @@ const personFive = new CreatePerson(
   ""
 );
 
-secondGenerationPersons.push(personFive);
+// secondGenerationPersons.push(personFive);
 
 const personSix = new CreatePerson(
   6,
@@ -118,7 +118,7 @@ const personSix = new CreatePerson(
   ""
 );
 
-secondGenerationPersons.push(personSix);
+// secondGenerationPersons.push(personSix);
 
 const personSeven = new CreatePerson(
   7,
@@ -137,7 +137,7 @@ const personSeven = new CreatePerson(
   ""
 );
 
-thirdGenerationPersons.push(personSeven);
+// thirdGenerationPersons.push(personSeven);
 
 const personEight = new CreatePerson(
   8,
@@ -156,7 +156,7 @@ const personEight = new CreatePerson(
   ""
 );
 
-thirdGenerationPersons.push(personEight);
+// thirdGenerationPersons.push(personEight);
 
 const personNine = new CreatePerson(
   9,
@@ -175,7 +175,7 @@ const personNine = new CreatePerson(
   ""
 );
 
-thirdGenerationPersons.push(personNine);
+// thirdGenerationPersons.push(personNine);
 
 const personTen = new CreatePerson(
   10,
@@ -194,12 +194,23 @@ const personTen = new CreatePerson(
   ""
 );
 
-thirdGenerationPersons.push(personTen);
+// thirdGenerationPersons.push(personTen);
 
-const treeData = [
-  firstGenerationPersons,
-  secondGenerationPersons,
-  thirdGenerationPersons,
-];
+// const treeData = [
+//   firstGenerationPersons,
+//   secondGenerationPersons,
+//   thirdGenerationPersons,
+// ];
 
-export { treeData };
+export {
+  personOne,
+  personTwo,
+  personThree,
+  personFour,
+  personFive,
+  personSix,
+  personSeven,
+  personEight,
+  personNine,
+  personTen,
+};

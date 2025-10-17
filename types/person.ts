@@ -1,4 +1,4 @@
-import type { IGender } from '~/types/gender';
+import IGender from '~/types/gender';
 
 export default interface IPerson {
 	id: number;

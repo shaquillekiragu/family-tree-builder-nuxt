@@ -1,4 +1,4 @@
-import type { IRelationshipType } from '~/types/relationship-type';
+import IRelationshipType from '~/types/relationship-type';
 
 export default interface IRelationship {
 	id: number;

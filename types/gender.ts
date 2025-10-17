@@ -1,1 +1,6 @@
-export type IGender = ['male', 'female'];
+const enum IGender {
+	MALE = 'male',
+	FEMALE = 'female',
+}
+
+export default IGender;

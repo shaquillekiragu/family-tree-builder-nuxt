@@ -1,9 +1,6 @@
 <template>
-	<section
-		v-for="person in generation"
-		class="w-full p-10 flex justify-center items-center gap-10"
-	>
-		<PersonComponent :person="person" />
+	<section class="w-full p-10 flex justify-center items-center gap-10">
+		<PersonComponent v-for="person in generation" :person="person" />
 	</section>
 </template>
 

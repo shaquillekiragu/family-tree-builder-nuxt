@@ -1,6 +1,5 @@
 import type IPerson from '~/types/person';
 import type { IGender } from '~/types/gender';
-import type { IBiologicalSex } from '~/types/biological-sex';
 
 export default class Person implements IPerson {
 	id: number;

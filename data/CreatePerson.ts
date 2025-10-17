@@ -1,54 +1,53 @@
-import { Person } from "~/data/Person";
-import type { IPerson, BiologicalSex } from "~/data/Person";
+import Person from '~/data/Person';
+import type IPerson from '~/types/person';
+import type { IGender } from '~/types/gender';
 
-class CreatePerson extends Person {
-  createPersonId(newPersonId: number): void {
-    this.personId = newPersonId;
-  }
+export default class CreatePerson extends Person {
+	createId(id: number): void {
+		this.id = id;
+	}
 
-  createTreeId(newTreeId: number): void {
-    this.treeId = newTreeId;
-  }
+	createUserId(user_id: number): void {
+		this.user_id = user_id;
+	}
 
-  createFirstName(newFirstName: string): void {
-    this.firstName = newFirstName;
-  }
+	createFirstName(first_name: string): void {
+		this.first_name = first_name;
+	}
 
-  createMiddleNames(newMiddleNames: string): void {
-    this.middleNames = newMiddleNames;
-  }
+	createMiddleNames(middle_names: string): void {
+		this.middle_names = middle_names;
+	}
 
-  createLastName(newLastName: string): void {
-    this.lastName = newLastName;
-  }
+	createLastName(last_name: string): void {
+		this.last_name = last_name;
+	}
 
-  createBiologicalSex(newBiologicalSex: BiologicalSex): void {
-    this.biologicalSex = newBiologicalSex;
-  }
+	createGender(gender: IGender): void {
+		this.gender = gender;
+	}
 
-  createDateOfBirth(newDateOfBirth: string): void {
-    this.dateOfBirth = newDateOfBirth;
-  }
+	createDateOfBirth(date_of_birth: string): void {
+		this.date_of_birth = date_of_birth;
+	}
 
-  createCountryOfBirth(newCountryOfBirth: string): void {
-    this.countryOfBirth = newCountryOfBirth;
-  }
+	createCountryOfBirth(country_of_birth: string): void {
+		this.country_of_birth = country_of_birth;
+	}
 
-  createIsPrimaryPerson(newIsPrimaryPerson: boolean): void {
-    this.isPrimaryPerson = newIsPrimaryPerson;
-  }
+	createIsPrimaryPerson(is_primary_person: boolean): void {
+		this.is_primary_person = is_primary_person;
+	}
 
-  createBiography(newBiography: string): void {
-    this.biography = newBiography;
-  }
+	createBiography(biography: string): void {
+		this.biography = biography;
+	}
 
-  createNotes(newNotes: string): void {
-    this.notes = newNotes;
-  }
+	createNotes(notes: string): void {
+		this.notes = notes;
+	}
 
-  createMultipleProperties(creates: Partial<IPerson>): void {
-    Object.assign(this, creates);
-  }
+	createMultipleProperties(creates: Partial<IPerson>): void {
+		Object.assign(this, creates);
+	}
 }
-
-export { CreatePerson };

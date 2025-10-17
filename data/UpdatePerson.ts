@@ -1,6 +1,6 @@
 import Person from '~/data/Person';
 import type IPerson from '~/types/person';
-import type { IGender } from '~/types/gender';
+import type IGender from '~/types/gender';
 
 export default class UpdatePerson extends Person {
 	updateId(id: number): void {

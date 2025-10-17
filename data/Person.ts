@@ -1,5 +1,5 @@
 import type IPerson from '~/types/person';
-import type { IGender } from '~/types/gender';
+import type IGender from '~/types/gender';
 
 export default class Person implements IPerson {
 	id: number;

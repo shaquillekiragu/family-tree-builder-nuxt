@@ -1,35 +1,31 @@
-interface ITree {
-  treeId: number;
-  userId: number;
-  treeName: string;
-  treePassword: string;
-  createdBy: string;
-  createdAt: string;
-}
+import type ITree from '~/types/tree';
 
-class Tree implements ITree {
-  treeId: number;
-  userId: number;
-  treeName: string;
-  treePassword: string;
-  createdBy: string;
-  createdAt: string;
+export default class Tree implements ITree {
+	id: number;
+	user_id: number;
+	tree_name: string;
+	tree_password: string;
+	slug: string;
+	created_at: string;
+	last_updated_at: string;
 
-  constructor(
-    treeId: number,
-    userId: number,
-    treeName: string,
-    treePassword: string,
-    createdBy: string,
-    createdAt: string
-  ) {
-    this.treeId = treeId;
-    this.userId = userId;
-    this.treeName = treeName;
-    this.treePassword = treePassword;
-    this.createdBy = createdBy;
-    this.createdAt = createdAt;
-  }
+	constructor(
+		id: number,
+		user_id: number,
+		tree_name: string,
+		tree_password: string,
+		slug: string,
+		created_at: string,
+		last_updated_at: string
+	) {
+		this.id = id;
+		this.user_id = user_id;
+		this.tree_name = tree_name;
+		this.tree_password = tree_password;
+		this.slug = slug;
+		this.created_at = created_at;
+		this.last_updated_at = last_updated_at;
+	}
 
-  createNewGeneration() {}
+	createNewGeneration() {}
 }
